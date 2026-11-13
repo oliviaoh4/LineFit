@@ -15,3 +15,13 @@ params, params_cov=scipy.optimize.curve_fit(linear,x, y)
 slope=params[0]
 intercept=params[1]
 
+print(data)
+print("height=", y)
+print("Mass=", x)
+
+y_units= "mm"
+x_units= "g"
+
+slope_units= slope_units(x_units, y_units)
+
+print(print_equation(slope, intercept, x_units, y_units))
